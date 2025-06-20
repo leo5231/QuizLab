@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quizzes.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <title>quiz.io - criação de quiz</title>
+</head>
+<body>
+    <div class="container" id="container">
+    
+        <h1>Seus Quizzes</h1>
+        <div class="quizzes-container" id="quiz-container">
+            
+        </div>
+        <button onclick="criarQuiz()">teste</button>
+
+        <div class="modal-overlay">
+            <div id="criacao" class="criacao-container">
+                
+                
+                <label>Escreva o enunciado da sua pergunta</label>
+                <input style="margin-bottom: 20px;" id="enunciado" type="text" placeholder="Enunciado da pergunta">
+
+                <div class="choices"><input id="alt1" type="text" placeholder="Alternativa A"><input class="radio" type="radio" name="resposta" value="0"></div>
+                <div class="choices"><input id="alt2" type="text" placeholder="Alternativa B"><input class="radio" type="radio" name="resposta" value="1"></div>
+                <div class="choices"><input id="alt3" type="text" placeholder="Alternativa C"><input class="radio" type="radio" name="resposta" value="2"></div>
+                <div class="choices"><input id="alt4" type="text" placeholder="Alternativa D"><input class="radio" type="radio" name="resposta" value="3"></div>
+            
+                <p style="background-color: #ffb703; padding: 15px; border-radius: 10px;">🚨 Selecione qual das alternativas é a resposta correta marcando o botão ao lado da alternativa correspondente.</p>
+
+                <div class="buttons">
+                    <button onclick="adicionarPergunta()" class="button1" id="add-pergunta">Adicionar Questao preechida</button>
+                    <button onclick="concluirQuiz()" class="button2" id="finish-quiz">Concluir QUIZ</button>
+                </div>
+
+            </div>
+
+            
+        </div>  
+    
+    </div>
+
+    <script src="quizzes.js"></script>
+</body>
+</html>

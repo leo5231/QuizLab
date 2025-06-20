@@ -1,0 +1,209 @@
+
+p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'argent-pixel-cf', 'Albert Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'argent-pixel-cf', 'Albert Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    display: none;
+}
+
+.criacao-container  {
+    background-color: #3c096c;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    gap: 15px;
+    width: 70%;
+    max-width: 90%;
+    z-index: 1000; /* acima do fundo */
+    display: none;
+    
+}
+
+.criacao-container.open {
+    display: flex;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.name-input {
+    background-color: #3c096c;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    gap: 15px;
+    width: 30%;
+    max-width: 90%;
+    z-index: 1000; 
+    position: fixed;/* acima do fundo */
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    color: aliceblue;
+    display: none;
+}
+
+.name-input input {
+    background-color: #6f627a;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: aliceblue;
+    outline: #453d4d;
+}
+
+.name-input button {
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff9100;
+    color: aliceblue;
+    height: 40px;
+    
+}
+
+.name-input.open {
+    display: flex;
+}
+
+
+.criacao-container input {
+    background-color: #6f627a;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    color: aliceblue;
+    outline: #453d4d;
+}
+
+.criacao-container input::placeholder {
+    color: #8f829b;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.criacao-container input:focus {
+     /* um tom mais claro do original */
+    box-shadow: 0 0 0 2px #c77dff; /* roxo claro ao redor */
+    border: none;
+  }
+  
+
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    
+}
+
+.criacao-container .button1 {
+    width: 49%;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #b356ff;
+    color: aliceblue;
+}
+
+.criacao-container .button2 {
+    width: 49%;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff9100;
+    color: aliceblue
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.choices .radio {
+    width: 20px;
+}
+
+.choices input {
+    width: 70%;
+}
+
+.quizzes-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    flex-wrap: wrap;
+    
+}
+
+.quizzes-card {
+    border-radius: 10px;
+    background-color: #3c096c;
+    padding: 15px;
+}
+
+.quizzes-card button {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px ;
+}
+
+.card-p {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'argent-pixel-cf', 'Albert Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+
