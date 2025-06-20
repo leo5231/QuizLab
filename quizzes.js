@@ -3,12 +3,39 @@
 const quizzes = []
 let quizAtual = []
 
+let quizName = null
+
+function nameCap() {
+    const modalName = document.querySelector('.modal-name')
+    modalName.classList.add('open')
+
+    const nameButton = document.getElementById('name-button')
+    const nameInput = document.getElementById('name-input')
+
+    
+   nameButton.addEventListener('click' ,function(){
+        const nameQuiz = nameInput.value.trim()
+        if(nameQuiz !== ''){
+            quizName = nameQuiz
+
+            modalName.classList.remove('open')
+
+            criarQuiz()
+
+            console.log(quizName)
+        }
+   })
+
+}
+
 function criarQuiz() {
-    const modal = document.querySelector('.criacao-container')
-    modal.classList.add('open')
 
     const overlay = document.querySelector('.modal-overlay')
     overlay.classList.add('open')
+    
+    const modal = document.querySelector('.criacao-container')
+    modal.classList.add('open')
+
 }
 
 function adicionarPergunta() {
@@ -71,12 +98,14 @@ function concluirQuiz() {
     }else{
         const novoQuiz =
         {
+            quizName,
             id,
             perguntas: quizAtual
         }
 
         quizzes.push(novoQuiz)
         quizAtual = []
+        quizName = null
         
         const modal = document.querySelector('.criacao-container')
         modal.classList.remove('open')
@@ -101,11 +130,14 @@ function previewQuizzes() {
         div.classList.add('quizzes-card')
         div.innerHTML = 
         `
+        <label>Tema do seu Quiz<label>
+        <p>tema:${quiz.quizName}</p>
+        
         <label>ID do seu Quiz<label>
         <p>id:${quiz.id}</p>
 
         <label>Tamanho do Quiz<label>
-        <p>id:${quiz.perguntas.length}</p>
+        <p>tamanho:${quiz.perguntas.length}</p>
            
         <button onclick="responderQuiz(quiz.id)">Responder Quiz</button>
 
